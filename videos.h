@@ -26,10 +26,10 @@ public:
     void setGenre(std::string newGenre);
     void setRating(int newRating);
 
-    std::string getID() const;
-    std::string getName() const;
-    std::string getGenre() const;
-    int getRating() const;
+    std::string getID();
+    std::string getName();
+    std::string getGenre();
+    int getRating();
     
     virtual void showInfo() = 0; //abstract class
 
