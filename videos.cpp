@@ -4,7 +4,7 @@
 
 //normal constructor for videos, without parameters
 Videos::Videos() {
-    id = "";
+    ID = "";
     name = "";
     length = 0;
     genre = "";

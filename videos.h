@@ -3,7 +3,7 @@
 
 class Videos {
 protected:
-    std::string id;
+    std::string ID;
     std::string name;
     int length; 
     std::string genre;
