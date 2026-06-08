@@ -1,9 +1,9 @@
 #pragma once
 #include <string>
-#include "video.h"
+#include "videos.h"
 #define EPSD_ATTRIB_SIZE 6
 
-class Episode : public Video {
+class Episode : public Videos {
 
     private:
         std::string episodeTitle;
