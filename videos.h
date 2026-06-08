@@ -1,38 +1,35 @@
 #pragma once
+
 #include <string>
+using namespace std;
 
 class Videos {
 protected:
-    std::string ID;
-    std::string name;
+    string id;
+    string name;
     int length; 
-    std::string genre;
+    string genre;
     int rating;
 
 public:
     //constructors for videos, normal constructor and parametrized constructor
     Videos();
 
-    Videos(std::string newID,
-         std::string newName,
+    Videos(string newID,
+         string newName,
          int newLength,
-         std::string newGenre,
+         string newGenre,
          int newRating);
     
     //create setters and getters
-    void setID(std::string newID);
-    void setName(std::string newName);
+    void setId(string newId);
+    void setName(string newName);
     void setLength(int newLength);
-    void setGenre(std::string newGenre);
+    void setGenre(string newGenre);
     void setRating(int newRating);
 
-    std::string getID();
-    std::string getName();
-    std::string getGenre();
-    int getRating();
-    
     virtual void showInfo() = 0; //abstract class
 
     virtual ~Videos() = 0;
-    
+
 };
