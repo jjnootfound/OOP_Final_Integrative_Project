@@ -24,3 +24,20 @@ Videos::Videos(string newId, string newName, int newLength, string newGenre, int
     rating = newRating;
 
 }
+
+//declare setters
+void Videos::setId(string newId) {
+    id = newId;
+}
+void Videos::setName(string newName) {
+    name = newName;
+}
+void Videos::setLength(int newLength) {
+    length = newLength;
+}
+void Videos::setGenre(string newGenre) {
+    genre = newGenre;
+}
+void Videos::setRating(int newRating) {
+    rating = newRating;
+}
