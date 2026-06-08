@@ -5,7 +5,7 @@ using namespace std;
 
 class Videos {
 protected:
-    string id;
+    string ID;
     string name;
     int length; 
     string genre;
@@ -22,7 +22,7 @@ public:
          int newRating);
     
     //create setters and getters
-    void setId(string newId);
+    void setID(string newID);
     void setName(string newName);
     void setLength(int newLength);
     void setGenre(string newGenre);

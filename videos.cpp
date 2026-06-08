@@ -8,7 +8,7 @@ using namespace std;
 
 //normal constructor for videos, without parameters
 Videos::Videos() {
-    id = "";
+    ID = "";
     name = "";
     length = 0;
     genre = "";
@@ -16,8 +16,8 @@ Videos::Videos() {
 }
 
 //ahora sí, parametrized constructor for the same class
-Videos::Videos(string newId, string newName, int newLength, string newGenre, int newRating) {
-    id = newId;
+Videos::Videos(string newID, string newName, int newLength, string newGenre, int newRating) {
+    ID = newID;
     name = newName;
     length = newLength;
     genre = newGenre;
@@ -26,8 +26,8 @@ Videos::Videos(string newId, string newName, int newLength, string newGenre, int
 }
 
 //declare setters
-void Videos::setId(string newId) {
-    id = newId;
+void Videos::setID(string newId) {
+    ID = newId;
 }
 void Videos::setName(string newName) {
     name = newName;
