@@ -20,5 +20,5 @@ class Episode : public Videos {
 
 };
 
-bool loadEpisodesFromCSV(std::string fileName, Episode* epiosdeArray, unsigned int arraySize);
+bool loadEpisodesFromCSV(std::string fileName, Episode* epiosdesArray, unsigned int arraySize);
 int countEpisodesDataLinesInCSV(std::string fileName);

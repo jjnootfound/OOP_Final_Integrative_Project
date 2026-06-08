@@ -38,7 +38,7 @@ bool loadMoviesFromCSV(std::string fileName, Movie* moviesArray, unsigned int ar
 	std::cout << "Loading file: " << fileName << std::endl;
 
 	while (getline(file, line)) {
-		Movie			newPart;
+		Movie			newMovie;
 		std::stringstream	ss(line);
 		std::string			cell;
 		int 			campo = 0, errors = 0;
@@ -49,16 +49,16 @@ bool loadMoviesFromCSV(std::string fileName, Movie* moviesArray, unsigned int ar
 
 			switch(campo) {
 				case 0:
-					newPart.setID(cell);
+					newMovie.setID(cell);
 					break;
 				case 1:
-					newPart.setName((cell));
+					newMovie.setName((cell));
 					break;
 				case 2:
-					newPart.setLength(stoi(cell));
+					newMovie.setLength(stoi(cell));
 					break;
 				case 3:
-					newPart.setGenre(cell);
+					newMovie.setGenre(cell);
 					break;
 				default:
 					errors++;
@@ -74,7 +74,7 @@ bool loadMoviesFromCSV(std::string fileName, Movie* moviesArray, unsigned int ar
 		}
 
 		if(size < arraySize) {
-			moviesArray[size] = newPart;
+			moviesArray[size] = newMovie;
 			size++;
 		}
 		else {
