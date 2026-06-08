@@ -46,7 +46,7 @@ void Videos::setRating(int newRating) {
 
 //todo: declare this getters : id, name, genre, rating
 string Videos::getId() {
-    return id;
+    return ID;
 }
 string Videos::getName() {
     return name;
