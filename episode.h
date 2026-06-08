@@ -13,8 +13,8 @@ class Episode : public Videos {
         Episode();
         Episode(std::string newID, std::string newName, int newLength, std::string newGenre, int newRating, std::string newEpisodeTitle, int newSeason);
         void setTitle(std::string newEpisodeTitle);
-        std::string getTitle();
         void setSeason(int newSeason);
+        std::string getTitle();
         int getSeason();
         void showInfo() override;
 
