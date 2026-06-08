@@ -57,3 +57,5 @@ string Videos::getGenre() {
 int Videos::getRating() {
     return rating;
 }
+Videos::~Videos() {
+}
