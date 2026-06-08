@@ -1,10 +1,14 @@
+//including global libraries
 #include <iostream>
+using namespace std;
+
+//include videos class
 #include "videos.h"
 
 
 //normal constructor for videos, without parameters
 Videos::Videos() {
-    ID = "";
+    id = "";
     name = "";
     length = 0;
     genre = "";
@@ -12,5 +16,11 @@ Videos::Videos() {
 }
 
 //ahora sí, parametrized constructor for the same class
+Videos::Videos(string newId, string newName, int newLength, string newGenre, int newRating) {
+    id = newId;
+    name = newName;
+    length = newLength;
+    genre = newGenre;
+    rating = newRating;
 
-
+}

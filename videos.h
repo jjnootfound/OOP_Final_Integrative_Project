@@ -3,7 +3,7 @@
 
 class Videos {
 protected:
-    std::string ID;
+    std::string id;
     std::string name;
     int length; 
     std::string genre;
@@ -20,13 +20,13 @@ public:
          int newRating);
     
     //create setters and getters
-    void setID(std::string newID);
+    void setId(std::string newId);
     void setName(std::string newName);
     void setLength(int newLength);
     void setGenre(std::string newGenre);
     void setRating(int newRating);
 
-    std::string getID();
+    std::string getId();
     std::string getName();
     std::string getGenre();
     int getRating();
@@ -34,5 +34,5 @@ public:
     virtual void showInfo() = 0; //abstract class
 
     virtual ~Videos() = 0;
-    
+
 };
