@@ -28,11 +28,6 @@ public:
     void setGenre(string newGenre);
     void setRating(int newRating);
 
-    string getId();
-    string getName();
-    string getGenre();
-    int getRating();
-    
     virtual void showInfo() = 0; //abstract class
 
     virtual ~Videos() = 0;
