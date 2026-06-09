@@ -23,6 +23,7 @@ int main () {
     //establishes datasize for episodes and movies :))
     int episodesSize = 0;
     int moviesSize = 0;
+    bool dataLoaded = false;
 
     //variable to make the user choose an option in the menu
     int menuOption;

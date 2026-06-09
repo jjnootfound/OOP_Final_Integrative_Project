@@ -30,7 +30,7 @@ int Episode::getSeason(){
 void Episode::showInfo(){
     std::cout << "Episode: ID: " << ID << ", Name: " << name 
     << ", Length: " << length << " minutes" << ", Genre: " << genre 
-    << ", Rating: " << rating << ", Title: " << episodeTitle << "Season: " << season << std::endl;
+    << ", Rating: " << rating << ", Title: " << episodeTitle << ", Season: " << season << std::endl;
 }
 
 bool loadEpisodesFromCSV(std::string fileName, Episode* episodesArray, unsigned int arraySize) {
