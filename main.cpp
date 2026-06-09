@@ -233,7 +233,13 @@ int main () {
         } 
     
     } while (menuOption != 0);
-        return 0;
+        
+    //clean memory usage
+    delete [] episodesArray;
+    delete [] moviesArray;
+    delete [] videosArray;
+
+    return 0;
 }
 
 
