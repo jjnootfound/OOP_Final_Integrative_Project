@@ -11,6 +11,8 @@ using namespace std;
 #define SERIES_FILE "SeriesDta.csv"
 #define MOVIES_FILE "MoviesData.csv"
 
+void showMenu();
+
 int main () {
 
     //declare pointers for each class
@@ -23,30 +25,42 @@ int main () {
     int moviesSize = 0;
 
     //variable to make the user choose an option in the menu
-    int menuOptions;
+    int menuOption;
 
     episodesSize = countEpisodesDataLinesInCSV(SERIES_FILE);
     moviesSize = countMoviesDataLinesInCSV(MOVIES_FILE);
 
     //menu for user to choose what to do in the program
     do {
-        cout<< "Media Menu: choose an option below (1-x)\n";
-        // options list
-        cout << "Option 1: Load csv files\n";
-        cout <<"Option 2: Show videos with a specific rating or from a specific genre\n";
-        cout <<"Option 3: Show episodes of a specific series with a specific rating\n";
-        cout <<"Option 4: Show movies with a specific rating\n";
-        cout <<"Option 5: Rate a video\n";
-        cout <<"Option 6: Exit menu \n";
 
-        cin>>menuOptions;
+        cout << endl;
+
+        showMenu();
+
+        cout << "Enter an option: ";
+        cin>>menuOption;
 
         //switch case for the program to run depending on user's choice
-        switch(menuOptions){
+        switch(menuOption){
             case 1:
             //load finles
             break;
         }
     } 
-    while (menuOptions == 6);
+    while (menuOption != 0);
         return 0;
+}
+
+void showMenu(){
+
+    cout<< "Menu: " << endl
+        // options list
+        << "Option 1: Load csv data files" << endl
+        << "Option 2: Show all the data" << endl
+        << "Option 3: Show videos with an specific rating or  specific genre" << endl
+        << "Option 4: Show episodes of a specific series with a specific rating" << endl
+        << "Option 5: Show movies with a specific rating" << endl
+        << "Option 6: Rate a video" << endl
+        << "Option 0: Exit menu" << endl;
+
+}
