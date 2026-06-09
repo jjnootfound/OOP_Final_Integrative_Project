@@ -16,7 +16,7 @@ void showMenu();
 int main () {
 
     //declare pointers for each class
-    Videos* videosArray = nullptr;
+    Videos** videosArray = nullptr;
     Episode* episodesArray = nullptr;
     Movie* moviesArray = nullptr;
 
@@ -37,13 +37,12 @@ int main () {
     //sum for the total sizes
     summedSizes = episodesSize + moviesSize;
 
-    //menu for user to choose what to do in the program
     do {
-
+        //method to show the menu to the user
         cout << endl;
-
         showMenu();
 
+        //make the user choose an option
         cout << "Enter an option: ";
         cin>>menuOption;
 
@@ -91,6 +90,17 @@ int main () {
                 cout << "Data loaded successfully";
             }
 
+            //here we will store the summed array
+            videosArray = new(nothrow) Videos *[summedSizes];
+
+            //handle error if videos array was not created
+            if(!videosArray) {
+                cerr << "array was not created \n";
+                delete [] moviesArray;
+                delete [] episodesArray;
+                return 1;
+            }
+
             break;
 
             case 2:
@@ -101,14 +111,20 @@ int main () {
             //variable to store the option for rating or genre
             int choose;
 
-            //make the user choose between genre and rating
-            
+            //
 
-        }
-    } 
-    while (menuOption != 0);
+
+            //make the user choose between genre and rating
+            cout << "Select 1 for genre and 2 for rating" << endl;
+            cin >> choose;
+
+            break;
+        } 
+    
+    } while (menuOption != 0);
         return 0;
 }
+
 
 void showMenu(){
 
