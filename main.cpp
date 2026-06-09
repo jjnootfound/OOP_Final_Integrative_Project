@@ -47,7 +47,7 @@ int main () {
             if(episodesSize == -1 && moviesSize == -1) {
                 //detects error for dataset loading
                 cerr << "Dataset could not be loaded from " << SERIES_FILE << "and " << MOVIES_FILE << "\n";
-                return 0;
+                return 1;
             } else {
                 cout << "Dataset loaded" << endl;
             }
