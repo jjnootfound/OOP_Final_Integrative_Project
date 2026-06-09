@@ -40,6 +40,13 @@ int main () {
         cout <<"Option 6: Exit menu \n";
 
         cin>>menuOptions;
+
+        //switch case for the program to run depending on user's choice
+        switch(menuOptions){
+            case 1:
+            //load finles
+            break;
+        }
     } 
     while (menuOptions == 6);
         return 0;
