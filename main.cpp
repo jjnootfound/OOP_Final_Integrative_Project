@@ -16,7 +16,7 @@ void showMenu();
 int main () {
 
     //declare pointers for each class
-    Videos* videosArray = nullptr;
+    Videos** videosArray = nullptr;
     Episode* episodesArray = nullptr;
     Movie* moviesArray = nullptr;
 
@@ -99,10 +99,14 @@ int main () {
             //variable to store the option for rating or genre
             int choose;
 
-            //make the user choose between genre and rating
-            
+            //
 
-        }
+
+            //make the user choose between genre and rating
+            cout << "Select 1 for genre and 2 for rating" << endl;
+            cin >> choose;
+
+            break;
     } 
     while (menuOption != 0);
         return 0;
