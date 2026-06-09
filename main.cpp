@@ -107,10 +107,12 @@ int main () {
             cin >> choose;
 
             break;
-    } 
-    while (menuOption != 0);
+        } 
+    
+    } while (menuOption != 0);
         return 0;
 }
+
 
 void showMenu(){
 
