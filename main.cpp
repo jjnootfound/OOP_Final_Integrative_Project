@@ -43,7 +43,22 @@ int main () {
         //switch case for the program to run depending on user's choice
         switch(menuOption){
             case 1:
-            //load finles
+            if(episodesSize == -1 && moviesSize == -1) {
+                //detects error for dataset loading
+                cerr << "Dataset could not be loaded from " << SERIES_FILE << "and " << MOVIES_FILE << "\n";
+                return 0;
+            } else {
+                cout << "Dataset loaded" << endl;
+            }
+
+            //prints the status of series file: it has x entries
+            cout <<"The file\"" << SERIES_FILE << "\" has: " << episodesSize << "entries\n";
+            //allocating data in heap, it returns nullptr if not enough memory
+            episodesArray = new(nothrow) Episode[episodesSize];
+
+            cout <<"The file\"" << MOVIES_FILE << "\" has: " << moviesSize << "entries\n";
+            moviesArray = new(nothrow) Movie[moviesSize];
+
             break;
             case 2:
             //Show all the data
