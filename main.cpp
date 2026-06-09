@@ -107,7 +107,7 @@ int main () {
                 reference++;
             }
 
-               for (int i = 0; i < moviesSize; i++) {
+            for (int i = 0; i < moviesSize; i++) {
                 videosArray[reference] = &moviesArray[i];
                 reference++;
             }
