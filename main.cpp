@@ -78,11 +78,12 @@ int main () {
                 return 1;
             }
 
-
-
-
-
+            //if there's no error, data did load :))
+            if(dataLoaded) {
+                cout << "Data loaded successfully";
+            }
             break;
+
             case 2:
             //Show all the data
             break;
