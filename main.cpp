@@ -60,11 +60,10 @@ void showMenu(){
     cout<< "Menu: " << endl
         // options list
         << "Option 1: Load csv data files" << endl
-        << "Option 2: Show all the data" << endl
-        << "Option 3: Show videos with an specific rating or  specific genre" << endl
-        << "Option 4: Show episodes of a specific series with a specific rating" << endl
-        << "Option 5: Show movies with a specific rating" << endl
-        << "Option 6: Rate a video" << endl
-        << "Option 0: Exit menu" << endl;
-
+        << "Option 2: Show the videos with a specific rating or from a specific genre." << endl
+        << "Option 3: Show the episodes of a specific series with a specific rating." << endl
+        << "Option 4: Show the movies with a specific rating." << endl
+        << "Option 5: Rate a video" << endl
+        << "Exit" << endl;
+    
 }
