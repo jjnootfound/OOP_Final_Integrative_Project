@@ -89,6 +89,15 @@ int main () {
             }
 
             //here we will store the summed array
+            videosArray = new(nothrow) Videos *[summedSizes];
+
+            //handle error if videos array was not created
+            if(!videosArray) {
+                cerr << "array was not created \n";
+                delete [] moviesArray;
+                delete [] episodesArray;
+                return 1;
+            }
 
             break;
 
