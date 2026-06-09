@@ -180,9 +180,23 @@ int main () {
                     
             break;
 
-            case 4:
-            //todo: finish case 4
+            case 4: {
+                //movies with a specific rating :))
 
+                //local variables
+                int targetRating;
+
+                cout << "Type a movie rating from 1 to 5 ";
+                cin >> targetRating;
+
+                //iterates through both arrays
+                for(int i = 0; i < summedSizes; i++) {
+                    //if the requested rating matches a movies rating
+                    if (videosArray[i] -> getRating() == targetRating) {
+                            videosArray[i] -> showInfo();
+                    }
+                }
+            }
 
             break;
 
