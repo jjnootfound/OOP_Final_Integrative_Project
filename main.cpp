@@ -152,8 +152,18 @@ int main () {
         }
 
             break;
-            case 3: {
 
+            case 3: {
+                string wantedSeries;
+                int wantedRating;
+
+                cout << "Type here the series name:";
+                cin >> wantedSeries;
+
+                cout << "Type the rating from 1 to 5";
+                cin >> wantedRating;
+
+                //todo: finish case 4
             }
             break;
 
@@ -161,8 +171,35 @@ int main () {
 
             break;
 
-            case 5:
+            case 5: {
+                //local variables
+                int rating;
+                string titleToRate;
 
+                cout << "Type the tile you want to rate";
+                cin.ignore(); //cleans whatever was stored there
+                getline(cin, titleToRate); //gets the whole line and stores it in variable
+
+                for(int i = 0; i < summedSizes; i++) {
+                    if (videosArray[i] -> getName() == titleToRate) {
+                        videosArray[i] -> showInfo();
+
+                        do {
+                            cout << "Rate the video from 1 to 5";
+                            cin >> rating;
+
+                            //validate new rating is within the allowed ranges
+                            if (rating < 1 || rating > 5) {
+                                cout <<"Invalid rating" << endl;
+                            }
+                        } while (rating < 1 || rating > 5);
+
+                        //update the rating with the setter
+                        videosArray[i] -> setRating(rating);
+                    }
+                }
+            }
+            
             break;
         } 
     
