@@ -1,5 +1,4 @@
 //import global libraries 
-
 #include <iostream>
 using namespace std;
 
@@ -7,6 +6,10 @@ using namespace std;
 #include "videos.h"
 #include "episode.h"
 #include "movie.h"
+
+//define csv files
+#define SERIES_FILE "SeriesDta.csv"
+#define MOVIES_FILE "MoviesData.csv"
 
 int main () {
 
