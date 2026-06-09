@@ -163,16 +163,21 @@ int main () {
                 getline(cin, wantedSeries); //gets the whole line, allows spaces
 
                 //the user enters the rating they want
-                cout << "Type the rating";
+                cout << "Type the rating from 1 to 5ca";
                 cin >> wantedRating;
 
+                //checks if ratings and name match with the input
                 for (int i = 0; i < summedSizes; i++) {
+                   if(videosArray[i] -> getRating() == wantedRating) {
+                    if (videosArray[i] -> getName() == wantedSeries) {
+                        videosArray[i] -> showInfo();
+                    }
+                   }
+                    }
                     
     
                 }
-                cout << "Type the rating from 1 to 5";
-                cin >> wantedRating;
-            }            
+                    
             break;
 
             case 4:
