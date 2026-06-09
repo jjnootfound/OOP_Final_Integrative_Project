@@ -32,7 +32,11 @@ int main () {
     do {
         cout<< "Media Menu: choose an option below (1-x)\n";
         // options list
-        //todo: finish options list
+        cout << "Option 1: Load csv files\n";
+        cout <<"Option 2: Show videos with a specific rating or from a specific genre\n";
+        cout <<"Option 3: Show episodes of a specific series with a specific rating\n";
+        cout <<"Option 4: Show movies with a specific rating\n";
+        cout <<"Option 5: Rate a video\n";
 
         cin>>menuOptions;
     } 
