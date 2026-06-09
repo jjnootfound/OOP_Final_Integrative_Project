@@ -157,17 +157,50 @@ int main () {
                 string wantedSeries;
                 int wantedRating;
 
+                //user enters the series they want
                 cout << "Type here the series name:";
-                cin >> wantedSeries;
+                cin.ignore();//cleans whatever was stored there
+                getline(cin, wantedSeries); //gets the whole line, allows spaces
 
+<<<<<<< HEAD
                 cout << "Type the rating from 1 to 5: ";
+=======
+                //the user enters the rating they want
+                cout << "Type the rating from 1 to 5ca";
+>>>>>>> 0d82201f328d6f50fdfd8fe88220f46c08781a5c
                 cin >> wantedRating;
 
-                //todo: finish case 4
-            }
+                //checks if ratings and name match with the input
+                for (int i = 0; i < summedSizes; i++) {
+                   if(videosArray[i] -> getRating() == wantedRating) {
+                    if (videosArray[i] -> getName() == wantedSeries) {
+                        videosArray[i] -> showInfo();
+                    }
+                   }
+                    }
+                    
+    
+                }
+                    
             break;
 
-            case 4:
+            case 4: {
+                //movies with a specific rating :))
+
+                //local variables
+                int targetRating;
+
+                cout << "Type a movie rating from 1 to 5 ";
+                cin >> targetRating;
+
+                //iterates through both arrays
+                for(int i = 0; i < summedSizes; i++) {
+                    //if the requested rating matches a movies rating
+                    if (videosArray[i] -> getRating() == targetRating) {
+                            videosArray[i] -> showInfo();
+                    }
+                }
+            }
 
             break;
 
@@ -199,12 +232,18 @@ int main () {
                     }
                 }
             }
-            
+
             break;
         } 
     
     } while (menuOption != 0);
-        return 0;
+        
+    //clean memory usage
+    delete [] episodesArray;
+    delete [] moviesArray;
+    delete [] videosArray;
+
+    return 0;
 }
 
 
