@@ -37,13 +37,12 @@ int main () {
     //sum for the total sizes
     summedSizes = episodesSize + moviesSize;
 
-    //menu for user to choose what to do in the program
     do {
-
+        //method to show the menu to the user
         cout << endl;
-
         showMenu();
 
+        //make the user choose an option
         cout << "Enter an option: ";
         cin>>menuOption;
 
@@ -88,6 +87,8 @@ int main () {
             if(dataLoaded) {
                 cout << "Data loaded successfully";
             }
+
+            //here we will store the summed array
 
             break;
 
