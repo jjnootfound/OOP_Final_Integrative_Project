@@ -37,8 +37,9 @@ int main () {
         cout <<"Option 3: Show episodes of a specific series with a specific rating\n";
         cout <<"Option 4: Show movies with a specific rating\n";
         cout <<"Option 5: Rate a video\n";
+        cout <<"Option 6: Exit menu \n";
 
         cin>>menuOptions;
     } 
-    while (menuOptions == 0);
+    while (menuOptions == 6);
         return 0;
