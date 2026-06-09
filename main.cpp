@@ -60,6 +60,12 @@ int main () {
             cout <<"The file\"" << MOVIES_FILE << "\" has: " << moviesSize << "entries\n";
             moviesArray = new(nothrow) Movie[moviesSize];
 
+            //error display in case nullptr is present
+            if(episodesArray == nullptr || moviesArray == nullptr) {
+                cerr << "There wasn't enough memory for the array\n";
+                return 0;
+            }
+
             break;
             case 2:
             //Show all the data
