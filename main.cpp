@@ -35,4 +35,6 @@ int main () {
         //todo: finish options list
 
         cin>>menuOptions;
-    }
+    } 
+    while (menuOptions == 0);
+        return 0;
