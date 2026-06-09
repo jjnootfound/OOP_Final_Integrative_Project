@@ -157,17 +157,27 @@ int main () {
                 string wantedSeries;
                 int wantedRating;
 
+                //user enters the series they want
                 cout << "Type here the series name:";
-                cin >> wantedSeries;
+                cin.ignore();//cleans whatever was stored there
+                getline(cin, wantedSeries); //gets the whole line, allows spaces
 
-                cout << "Type the rating from 1 to 5";
+                //the user enters the rating they want
+                cout << "Type the rating";
                 cin >> wantedRating;
 
-                //todo: finish case 4
-            }
+                for (int i = 0; i < summedSizes; i++) {
+                    
+    
+                }
+                cout << "Type the rating from 1 to 5";
+                cin >> wantedRating;
+            }            
             break;
 
             case 4:
+            //todo: finish case 4
+
 
             break;
 
@@ -199,7 +209,7 @@ int main () {
                     }
                 }
             }
-            
+
             break;
         } 
     
