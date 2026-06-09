@@ -48,7 +48,7 @@ int main () {
 
         //switch case for the program to run depending on user's choice
         switch(menuOption){
-            case 1:
+            case 1:{
             if(episodesSize == -1 && moviesSize == -1) {
                 //detects error for dataset loading
                 cerr << "Dataset could not be loaded from " << SERIES_FILE << "and " << MOVIES_FILE << "\n";
@@ -113,7 +113,7 @@ int main () {
             }
 
             break;
-
+        }
             case 2: {
             //case variables for rating and genre
             int rating;
