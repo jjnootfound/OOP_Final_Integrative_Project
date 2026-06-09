@@ -45,6 +45,10 @@ int main () {
             case 1:
             //load finles
             break;
+            case 2:
+            //Show all the data
+            break;
+
         }
     } 
     while (menuOption != 0);
