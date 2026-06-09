@@ -124,11 +124,11 @@ int main () {
 
             
                 //make the user choose between genre and rating
-                cout << "Select 1 for genre and 2 for rating" << endl;
+                cout << "Select 1 for genre and 2 for rating";
                 cin >> choose;
 
                 if(choose == 1) {
-                    cout << "Select a video genre: " << endl;
+                    cout << "Select a video genre: ";
                     cin >> genre;
 
                     //iterates in a for the videos array to get
@@ -160,7 +160,7 @@ int main () {
                 cout << "Type here the series name:";
                 cin >> wantedSeries;
 
-                cout << "Type the rating from 1 to 5";
+                cout << "Type the rating from 1 to 5: ";
                 cin >> wantedRating;
 
                 //todo: finish case 4
@@ -176,7 +176,7 @@ int main () {
                 int rating;
                 string titleToRate;
 
-                cout << "Type the tile you want to rate";
+                cout << "Type the tile you want to rate: ";
                 cin.ignore(); //cleans whatever was stored there
                 getline(cin, titleToRate); //gets the whole line and stores it in variable
 
@@ -185,7 +185,7 @@ int main () {
                         videosArray[i] -> showInfo();
 
                         do {
-                            cout << "Rate the video from 1 to 5";
+                            cout << "Rate the video from 1 to 5: ";
                             cin >> rating;
 
                             //validate new rating is within the allowed ranges
