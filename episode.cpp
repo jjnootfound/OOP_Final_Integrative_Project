@@ -33,7 +33,7 @@ void Episode::showInfo(){
     << ", Rating: " << rating << ", Title: " << episodeTitle << "Season: " << season << std::endl;
 }
 
-bool loadMoviesFromCSV(std::string fileName, Episode* episodesArray, unsigned int arraySize) {
+bool loadEpisodesFromCSV(std::string fileName, Episode* episodesArray, unsigned int arraySize) {
 	std::ifstream		file(fileName);
 	std::string			line;
 	unsigned int	size = 0;
@@ -110,7 +110,7 @@ bool loadMoviesFromCSV(std::string fileName, Episode* episodesArray, unsigned in
 }
 
 
-int countMoviesDataLinesInCSV(std::string fileName) {
+int countEpisodesDataLinesInCSV(std::string fileName) {
     std::ifstream    file(fileName);
     int         lineCount = 0;
     std::string      line;

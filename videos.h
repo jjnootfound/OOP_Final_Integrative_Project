@@ -35,6 +35,6 @@ public:
 
     virtual void showInfo() = 0; //abstract class
 
-    virtual ~Videos() = 0;
+    virtual ~Videos();
 
 };
