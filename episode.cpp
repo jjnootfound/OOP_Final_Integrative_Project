@@ -56,13 +56,13 @@ bool loadMoviesFromCSV(std::string fileName, Episode* episodesArray, unsigned in
 		Episode			newEpisode;
 		std::stringstream	ss(line);
 		std::string			cell;
-		int 			campo = 0, errors = 0;
+		int 			columnIndex = 0, errors = 0;
 
 		while (getline(ss, cell, ',')) {
 			if(!cell.length())
 				errors++;
 
-			switch(campo) {
+			switch(columnIndex) {
 				case 0:
 					newEpisode.setID(cell);
 					break;
@@ -85,10 +85,10 @@ bool loadMoviesFromCSV(std::string fileName, Episode* episodesArray, unsigned in
 					errors++;
 					break;
 			}
-			campo++;
+			columnIndex++;
 		}
 
-		if (errors || campo != EPSD_ATTRIB_SIZE) {
+		if (errors || columnIndex != EPSD_ATTRIB_SIZE) {
 			std::cerr << "Error at line:\n" << line << std::endl;
 			file.close();
 			return false;
