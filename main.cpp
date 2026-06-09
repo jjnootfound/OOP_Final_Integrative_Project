@@ -162,12 +162,7 @@ int main () {
                 cin.ignore();//cleans whatever was stored there
                 getline(cin, wantedSeries); //gets the whole line, allows spaces
 
-<<<<<<< HEAD
                 cout << "Type the rating from 1 to 5: ";
-=======
-                //the user enters the rating they want
-                cout << "Type the rating from 1 to 5ca";
->>>>>>> 0d82201f328d6f50fdfd8fe88220f46c08781a5c
                 cin >> wantedRating;
 
                 //checks if ratings and name match with the input
