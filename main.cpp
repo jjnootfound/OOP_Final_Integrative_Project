@@ -76,11 +76,13 @@ int main () {
             if(!loadEpisodesFromCSV(SERIES_FILE, episodesArray, episodesSize)) {
                 cerr << "Error while loading dataset from " << SERIES_FILE << "\n";
                 delete [] episodesArray;
+                episodesArray = nullptr;
                 return 1;
             }
             if(!loadMoviesFromCSV(MOVIES_FILE, moviesArray, moviesSize)) {
                 cerr << "error while loading dataset from " << MOVIES_FILE << "\n";
                 delete [] moviesArray;
+                moviesArray = nullptr;
                 return 1;
             }
 
