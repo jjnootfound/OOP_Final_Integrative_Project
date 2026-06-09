@@ -24,12 +24,18 @@ int main () {
     int episodesSize = 0;
     int moviesSize = 0;
     bool dataLoaded = false;
-
+    
     //variable to make the user choose an option in the menu
     int menuOption;
 
+    //variable to store the sum of episode and movies sizes
+    int summedSizes;
+
     episodesSize = countEpisodesDataLinesInCSV(SERIES_FILE);
     moviesSize = countMoviesDataLinesInCSV(MOVIES_FILE);
+
+    //sum for the total sizes
+    summedSizes = episodesSize + moviesSize;
 
     //menu for user to choose what to do in the program
     do {
@@ -82,6 +88,7 @@ int main () {
             if(dataLoaded) {
                 cout << "Data loaded successfully";
             }
+
             break;
 
             case 2:
