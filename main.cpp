@@ -63,8 +63,23 @@ int main () {
             //error display in case nullptr is present
             if(episodesArray == nullptr || moviesArray == nullptr) {
                 cerr << "There wasn't enough memory for the array\n";
-                return 0;
+                return 1;
             }
+        
+            //error handling and deleting the arrays to avoid memory leaks
+            if(!loadEpisodesFromCSV(SERIES_FILE, episodesArray, episodesSize)) {
+                cerr << "Error while loading dataset from " << SERIES_FILE << "\n";
+                delete [] episodesArray;
+                return 1;
+            }
+            if(!loadMoviesFromCSV(MOVIES_FILE, moviesArray, moviesSize)) {
+                cerr << "error while loading dataset from " << MOVIES_FILE << "\n";
+                return 1;
+            }
+
+
+
+
 
             break;
             case 2:
