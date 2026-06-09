@@ -75,13 +75,11 @@ int main () {
             if(!loadEpisodesFromCSV(SERIES_FILE, episodesArray, episodesSize)) {
                 cerr << "Error while loading dataset from " << SERIES_FILE << "\n";
                 delete [] episodesArray;
-                episodesArray = nullptr;
                 return 1;
             }
             if(!loadMoviesFromCSV(MOVIES_FILE, moviesArray, moviesSize)) {
                 cerr << "error while loading dataset from " << MOVIES_FILE << "\n";
                 delete [] moviesArray;
-                moviesArray = nullptr;
                 return 1;
             }
 
@@ -96,9 +94,22 @@ int main () {
             //handle error if videos array was not created
             if(!videosArray) {
                 cerr << "array was not created \n";
-                delete [] moviesArray;
                 delete [] episodesArray;
+                delete [] moviesArray;
                 return 1;
+            }
+
+            //copy each position of the episodes and movies array
+            //directly to the heap where videos array is
+            int reference = 0;
+            for (int i = 0; i < episodesSize; i++) {
+                videosArray[reference] = &episodesArray[i];
+                reference++;
+            }
+
+               for (int i = 0; i < moviesSize; i++) {
+                videosArray[reference] = &moviesArray[i];
+                reference++;
             }
 
             break;
@@ -111,9 +122,7 @@ int main () {
             //variable to store the option for rating or genre
             int choose;
 
-            //
-
-
+        
             //make the user choose between genre and rating
             cout << "Select 1 for genre and 2 for rating" << endl;
             cin >> choose;
