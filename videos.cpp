@@ -29,15 +29,19 @@ Videos::Videos(string newID, string newName, int newLength, string newGenre, int
 void Videos::setID(string newId) {
     ID = newId;
 }
+
 void Videos::setName(string newName) {
     name = newName;
 }
+
 void Videos::setLength(int newLength) {
     length = newLength;
 }
+
 void Videos::setGenre(string newGenre) {
     genre = newGenre;
 }
+
 void Videos::setRating(int newRating) {
     rating = newRating;
 }
@@ -46,12 +50,19 @@ void Videos::setRating(int newRating) {
 string Videos::getId() {
     return ID;
 }
+
 string Videos::getName() {
     return name;
 }
+
+int Videos::getLength() {
+    return length;
+}
+
 string Videos::getGenre() {
     return genre;
 }
+
 int Videos::getRating() {
     return rating;
 }

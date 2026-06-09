@@ -30,6 +30,7 @@ public:
 
     string getId();
     string getName();
+    int getLength();
     string getGenre();
     int getRating();
 
