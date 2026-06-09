@@ -92,8 +92,15 @@ int main () {
             break;
 
             case 2:
-            //Show all the data
-            break;
+            //case variables for rating and genre
+            int rating;
+            string genre;
+            
+            //variable to store the option for rating or genre
+            int choose;
+
+            //make the user choose between genre and rating
+            
 
         }
     } 
