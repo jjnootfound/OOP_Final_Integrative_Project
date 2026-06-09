@@ -8,7 +8,7 @@ using namespace std;
 #include "movie.h"
 
 //define csv files
-#define SERIES_FILE "SeriesDta.csv"
+#define SERIES_FILE "SeriesData.csv"
 #define MOVIES_FILE "MoviesData.csv"
 
 void showMenu();
@@ -115,41 +115,41 @@ int main () {
             break;
         }
             case 2: {
-            //case variables for rating and genre
-            int rating;
-            string genre;
+                //case variables for rating and genre
+                int rating;
+                string genre;
+                
+                //variable to store the option for rating or genre
+                int choose;
+
             
-            //variable to store the option for rating or genre
-            int choose;
+                //make the user choose between genre and rating
+                cout << "Select 1 for genre and 2 for rating";
+                cin >> choose;
 
-        
-            //make the user choose between genre and rating
-            cout << "Select 1 for genre and 2 for rating" << endl;
-            cin >> choose;
+                if(choose == 1) {
+                    cout << "Select a video genre: ";
+                    cin >> genre;
 
-            if(choose == 1) {
-                cout << "Select a video genre: " << endl;
-                cin >> genre;
-
-                //iterates in a for the videos array to get
-                //the pointer uses the actual memory value and gets genre
-                for(int i = 0; i < summedSizes; i++) {
-                    if(videosArray[i] -> getGenre() == genre) {
-                        videosArray[i]-> showInfo();
+                    //iterates in a for the videos array to get
+                    //the pointer uses the actual memory value and gets genre
+                    for(int i = 0; i < summedSizes; i++) {
+                        if(videosArray[i] -> getGenre() == genre) {
+                            videosArray[i]-> showInfo();
+                        }
                     }
-                }
-                //same case but for rating
-            } else if (choose == 2) {
-                cout << "Type a rating from one to five " << endl;
-                cin >> rating;
+                    //same case but for rating
+                } else if (choose == 2) {
+                    cout << "Type a rating from one to five " << endl;
+                    cin >> rating;
 
-                for(int i = 0; i < summedSizes; i++) {
-                    if(videosArray[i] -> getRating() == rating) {
-                        videosArray[i] -> showInfo();
+                    for(int i = 0; i < summedSizes; i++) {
+                        if(videosArray[i] -> getRating() == rating) {
+                            videosArray[i] -> showInfo();
+                        }
                     }
                 }
             }
-        }
 
             break;
 
@@ -162,8 +162,12 @@ int main () {
                 cin.ignore();//cleans whatever was stored there
                 getline(cin, wantedSeries); //gets the whole line, allows spaces
 
+<<<<<<< HEAD
+                cout << "Type the rating from 1 to 5: ";
+=======
                 //the user enters the rating they want
                 cout << "Type the rating from 1 to 5ca";
+>>>>>>> 0d82201f328d6f50fdfd8fe88220f46c08781a5c
                 cin >> wantedRating;
 
                 //checks if ratings and name match with the input
@@ -205,7 +209,7 @@ int main () {
                 int rating;
                 string titleToRate;
 
-                cout << "Type the tile you want to rate";
+                cout << "Type the tile you want to rate: ";
                 cin.ignore(); //cleans whatever was stored there
                 getline(cin, titleToRate); //gets the whole line and stores it in variable
 
@@ -214,7 +218,7 @@ int main () {
                         videosArray[i] -> showInfo();
 
                         do {
-                            cout << "Rate the video from 1 to 5";
+                            cout << "Rate the video from 1 to 5: ";
                             cin >> rating;
 
                             //validate new rating is within the allowed ranges
