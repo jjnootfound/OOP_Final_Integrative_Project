@@ -114,7 +114,7 @@ int main () {
 
             break;
 
-            case 2:
+            case 2: {
             //case variables for rating and genre
             int rating;
             string genre;
@@ -149,6 +149,19 @@ int main () {
                     }
                 }
             }
+        }
+
+            break;
+            case 3: {
+
+            }
+            break;
+
+            case 4:
+
+            break;
+
+            case 5:
 
             break;
         } 
@@ -167,6 +180,6 @@ void showMenu(){
         << "Option 3: Show the episodes of a specific series with a specific rating." << endl
         << "Option 4: Show the movies with a specific rating." << endl
         << "Option 5: Rate a video" << endl
-        << "Exit" << endl;
+        << "Exit (type 0)" << endl;
     
 }
