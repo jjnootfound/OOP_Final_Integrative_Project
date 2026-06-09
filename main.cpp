@@ -8,7 +8,7 @@ using namespace std;
 #include "movie.h"
 
 //define csv files
-#define SERIES_FILE "SeriesDta.csv"
+#define SERIES_FILE "SeriesData.csv"
 #define MOVIES_FILE "MoviesData.csv"
 
 void showMenu();
@@ -115,41 +115,41 @@ int main () {
             break;
 
             case 2: {
-            //case variables for rating and genre
-            int rating;
-            string genre;
+                //case variables for rating and genre
+                int rating;
+                string genre;
+                
+                //variable to store the option for rating or genre
+                int choose;
+
             
-            //variable to store the option for rating or genre
-            int choose;
+                //make the user choose between genre and rating
+                cout << "Select 1 for genre and 2 for rating" << endl;
+                cin >> choose;
 
-        
-            //make the user choose between genre and rating
-            cout << "Select 1 for genre and 2 for rating" << endl;
-            cin >> choose;
+                if(choose == 1) {
+                    cout << "Select a video genre: " << endl;
+                    cin >> genre;
 
-            if(choose == 1) {
-                cout << "Select a video genre: " << endl;
-                cin >> genre;
-
-                //iterates in a for the videos array to get
-                //the pointer uses the actual memory value and gets genre
-                for(int i = 0; i < summedSizes; i++) {
-                    if(videosArray[i] -> getGenre() == genre) {
-                        videosArray[i]-> showInfo();
+                    //iterates in a for the videos array to get
+                    //the pointer uses the actual memory value and gets genre
+                    for(int i = 0; i < summedSizes; i++) {
+                        if(videosArray[i] -> getGenre() == genre) {
+                            videosArray[i]-> showInfo();
+                        }
                     }
-                }
-                //same case but for rating
-            } else if (choose == 2) {
-                cout << "Type a rating from one to five " << endl;
-                cin >> rating;
+                    //same case but for rating
+                } else if (choose == 2) {
+                    cout << "Type a rating from one to five " << endl;
+                    cin >> rating;
 
-                for(int i = 0; i < summedSizes; i++) {
-                    if(videosArray[i] -> getRating() == rating) {
-                        videosArray[i] -> showInfo();
+                    for(int i = 0; i < summedSizes; i++) {
+                        if(videosArray[i] -> getRating() == rating) {
+                            videosArray[i] -> showInfo();
+                        }
                     }
                 }
             }
-        }
 
             break;
 
