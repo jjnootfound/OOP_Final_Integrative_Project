@@ -4,7 +4,7 @@
 #include <fstream>
 #include <sstream>
 
-Episode::Episode() : Videos(){
+Episode::Episode() : Videos(), episodeTitle(""), season(0){
 }
 
 Episode::Episode(std::string newID, std::string newName, int newLength, std::string newGenre, int newRating, std::string newEpisodeTitle, int newSeason) : 
