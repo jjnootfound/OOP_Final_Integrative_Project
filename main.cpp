@@ -74,6 +74,7 @@ int main () {
             }
             if(!loadMoviesFromCSV(MOVIES_FILE, moviesArray, moviesSize)) {
                 cerr << "error while loading dataset from " << MOVIES_FILE << "\n";
+                delete [] moviesArray;
                 return 1;
             }
 
